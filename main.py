@@ -1,10 +1,10 @@
-from tasks import show_tasks
-
+from tasks import show_tasks, save_tasks, load_tasks
+import json
 
 
 name = input("enter your name: ")
 print("welcome", name)
-tasks = []
+tasks = load_tasks()
 count = int(input("how many tasks do you want to add? : "))
 
 for i in range(count):
@@ -12,3 +12,5 @@ for i in range(count):
     tasks.append(task)
 
 show_tasks(tasks)
+save_tasks(tasks)
+load_tasks()
